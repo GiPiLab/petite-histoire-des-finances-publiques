@@ -1,0 +1,58 @@
+\documentclass[a5paper,11pt,DIV=calc,numbers=noenddot]{scrreprt}
+\usepackage[francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[bookmarks,colorlinks=true,linkcolor=blue,urlcolor=blue,
+pdftitle={Petite Histoire des Finances Publiques},
+pdfauthor={Laboratoire de Recherche pour le Développement Local}, 
+plainpages=false,%
+hypertexnames=false]{hyperref}
+\usepackage{minitoc}
+\usepackage{shorttoc}
+\usepackage[kerning=true,spacing=true,tracking=true]{microtype}
+
+\interfootnotelinepenalty=10000
+\widowpenalty=10000
+\clubpenalty=10000
+
+\author{\textbf{Gilbert MONDARY}\\\small\textbf{Laboratoire de Recherche pour le Développement 
+Local}\\\url{http://gipilab.org}\\\href{mailto:labo@gipilab.org}{labo@gipilab.org}}
+\title{\textbf{Petite Histoire des Finances Publiques}}
+\date{26 mars 2006\\\footnotesize{Révision du 24 février 2012}}
+
+\mtcselectlanguage{french}
+
+\begin{document}
+\renewcommand{\thepage}{\roman{page}}
+
+\dominitoc
+
+\maketitle
+%\addtolength{\parskip}{\baselineskip}
+\input{intro}
+
+\footnotesize
+\shorttoc{Sommaire}{0}
+\faketableofcontents
+
+\normalsize
+\clearpage
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+\input{chapitre_1}
+\include{chapitre_2}
+\include{chapitre_3}
+\include{chapitre_4}
+\include{chapitre_5}
+\include{chapitre_6}
+\include{chapitre_7}
+\include{chapitre_8}
+\include{chapitre_9}
+\include{chapitre_10}
+\part{Annexes}
+\appendix
+\include{lolf}
+\include{historique_lolf}
+\include{lexique_lolf}
+\end{document}
